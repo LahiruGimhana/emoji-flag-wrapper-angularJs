@@ -1,0 +1,80 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <!-- <span>Welcome</span> -->
+  <div>
+    <!-- <input type="text" [(ngModel)]="emojiValue" [ngStyle]="{ 'width': '80%' }"></input> -->
+
+    <!-- <img *ngIf="emojiValue.includes('[image]')" src="https://flagcdn.com/w20/za.png" alt="Image" width="20" height="20"> -->
+    <!-- <div id="text_wrapper">
+      <div id="text" [(ngModel)]="emojiValue" contentEditable="true" hidefocus="true" #textElementRef
+        style="height: 200%; width: 80%; border: solid 1px">
+      </div>
+    </div> -->
+    <!-- <div contenteditable="true" [(ngModel)]="emojiValue" [innerHTML]="emojiValue"></div> -->
+
+    <!-- <div id="text_wrapper">
+      <div id="text" contentEditable="true" hidefocus="true" #textElementRef
+        style="height: 200%; width: 80%; border: solid 1px"></div>
+    </div>
+    <br>
+    <button id="" (click)="send()">send</button> -->
+    <!-- <div [innerHTML]="emojiValue"></div> -->
+    <!-- 
+    <div id="message_container"></div>
+    <br>
+    <br>
+    <div id="text_wrapper">
+      <div id="showemojies" contentEditable="true" hidefocus="true" #textElementRef> </div>
+    </div>
+
+
+    <p>received message</p>
+    <button id="receive_button" (click)="receiveMessage('sss')">receive</button>
+
+    <emoji-mart emoji="point_up" [style]="{ position: 'absolute', bottom: '20px', right: '20px' }"
+      [i18n]="{ search: 'Recherche', categories: { search: 'Résultats de recherche', recent: 'Récents' } }"
+      (emojiClick)="addEmoji($event)"></emoji-mart> -->
+
+
+    <div id="chat_window">
+      <div id="message_container"></div>
+      <div id="input_container">
+        <div id="text_wrapper">
+          <div id="text" contentEditable="true" hidefocus="true" #textElementRef (click)="setFocusToPointer($event)"
+            style="height: 200%; width: 80%; border: solid 1px"></div>
+
+        </div>
+        <button id="send_button" (click)="sendMessage()">Send</button>
+        <button id="receive_button" (click)="receiveMessage('')">receive</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<emoji-mart emoji="point_up" [style]="{ position: 'absolute', bottom: '20px', right: '20px' }"
+  [i18n]="{ search: 'Recherche', categories: { search: 'Résultats de recherche', recent: 'Récents' } }"
+  (emojiClick)="addEmoji($event)"></emoji-mart>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
